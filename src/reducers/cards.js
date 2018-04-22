@@ -43,6 +43,20 @@ export const setAdvancedType = type => {
   }
 }
 
+export const setLegalType = legal => {
+  return {
+    type: action.LEGAL_TYPE,
+    payload: { legalType: legal }
+  }
+}
+
+export const setCardChoice = cardChoice => {
+  return {
+    type: action.CARD_CHOICE,
+    payload: { card: cardChoice }
+  }
+}
+
 const ACTION_HANDLERS = {
   [action.SET_STATE]: (state, action) => {
     return { ...state, ...action.payload }
@@ -65,6 +79,12 @@ const ACTION_HANDLERS = {
   },
   [action.ADVANCED_TYPE]: (state, action) => {
     return { ...state, ...action.payload }
+  },
+  [action.LEGAL_TYPE]: (state, action) => {
+    return { ...state, ...action.payload }
+  },
+  [action.CARD_CHOICE]: (state, action) => {
+    return { ...state, ...action.payload }
   }
 }
 
@@ -74,7 +94,9 @@ let defaultState = {
   SearchResultsAdvanced: [],
   advancedName: '',
   advancedText: '',
-  advancedType: []
+  advancedType: [],
+  legalType: '',
+  card: []
 }
 
 export const reducer = (state = defaultState, action) => {

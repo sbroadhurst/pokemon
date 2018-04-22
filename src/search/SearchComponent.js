@@ -20,11 +20,7 @@ class SearchComponent extends React.Component {
 
   getSearchResultsName() {
     let query = this.props.match.params.text
-    fetch(
-      'https://api.pokemontcg.io/v1/cards?name=' +
-        query +
-        '&updatedSince=05/01/2018'
-    )
+    fetch('https://api.pokemontcg.io/v1/cards?name=' + query)
       .then(res => {
         return res.json()
       })

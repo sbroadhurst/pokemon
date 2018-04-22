@@ -4,14 +4,16 @@ import AdvancedSearchComponent from './AdvancedSearchComponent'
 import {
   setAdvancedName,
   setAdvancedText,
-  setAdvancedType
+  setAdvancedType,
+  setLegalType
 } from '../reducers/cards'
 
 const mapStatetoProps = state => {
   return {
     advancedName: state.cards.advancedName,
     advancedText: state.cards.advancedText,
-    advancedType: state.cards.advancedType
+    advancedType: state.cards.advancedType,
+    legalType: state.cards.legalType
   }
 }
 
@@ -25,6 +27,9 @@ const mapDispatchToProps = dispatch => {
     },
     setAdvancedType: payload => {
       dispatch(setAdvancedType(payload))
+    },
+    setLegalType: payload => {
+      dispatch(setLegalType(payload))
     }
   }
 }

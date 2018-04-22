@@ -1,0 +1,92 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  /* background: tomato; */
+  height: 200px;
+  font-size: 2em;
+}
+
+.footer {
+  /* background: lightgreen; */
+  height: 300px;
+  color: red;
+}
+
+.main {
+  text-align: left;
+  /* background: deepskyblue; */
+}
+
+.aside-1 {
+  height: 300px;
+  width: 300px;
+}
+
+.hero-image {
+  width: 290px;
+  height: 290px;
+}
+
+.card-image {
+  width: 250px;
+  height: 300px;
+}
+
+.info {
+  float: left;
+  color: green;
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1 auto;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .main {
+    flex: 3 0px;
+  }
+  .aside-1 {
+    order: 1;
+  }
+  .main {
+    order: 2;
+  }
+  .footer {
+    order: 3;
+  }
+}
+
+body {
+  padding: 2em;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1em;
+}
+
+#page-numbers {
+  list-style: none;
+  display: flex;
+}
+
+#page-numbers > li {
+  margin-right: 0.3em;
+  color: blue;
+  user-select: none;
+  cursor: pointer;
+}

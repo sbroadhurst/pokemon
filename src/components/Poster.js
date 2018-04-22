@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 class Poster extends React.Component {
   render() {
     let card = this.props.info
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <div className="card-list" style={{ display: 'inline' }}>
         <Link to={{ pathname: '/info/' + card.id }}>

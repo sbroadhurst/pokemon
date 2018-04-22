@@ -5,6 +5,7 @@ import Header from '../header'
 import SearchComponent from '../search'
 import AdvancedSearchComponent from '../advancedSearch'
 import AdvancedResults from '../advancedResults'
+import Card from '../card'
 
 export default class Routes extends Component {
   render() {
@@ -22,9 +23,10 @@ export default class Routes extends Component {
             />
             <Route
               exact
-              path="/advancedSearchResults/:name?/:text?/:type?"
+              path="/advancedSearchResults"
               component={AdvancedResults}
             />
+            <Route exact path="/info/:id" component={Card} />
           </Switch>
         </div>
       </Router>
