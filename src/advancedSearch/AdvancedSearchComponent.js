@@ -84,12 +84,12 @@ class AdvancedSearchComponent extends React.Component {
             <RadioButton
               label="Standard"
               style={styles.checkbox}
-              value="standardlegal"
+              value="setCode=xyp|xy8|xy9|g1|xy10|xy11|xy12|sm1|smp|sm2|sm3|sm35|sm4|sm5"
             />
             <RadioButton
               label="Expanded"
               style={styles.checkbox}
-              value="expandedlegal"
+              value="setCode=bwp|bw1|bw2|bw3|bw4|bw5|bw6|dv1|bw7|bw8|bw9|bw10|xyp|bw11|xy0|xy1|xy2|xy3|xy4|xy5|dc1|xy6|xy7|xy8|xy9|g1|xy10|xy11|xy12|sm1|smp|sm2|sm3|sm35|sm4|sm5"
             />
           </RadioButtonGroup>
         </div>

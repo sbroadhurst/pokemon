@@ -17,8 +17,7 @@ class AdvancedResults extends React.Component {
         '&types=' +
         types +
         '&' +
-        legal +
-        '=true'
+        legal
     )
       .then(res => {
         return res.json()
