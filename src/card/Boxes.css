@@ -32,13 +32,8 @@
   width: 300px;
 }
 
-.hero-image {
-  width: 290px;
-  height: 290px;
-}
-
 .card-image {
-  width: 250px;
+  width: 235px;
   height: 300px;
 }
 
@@ -70,6 +65,7 @@
 
 body {
   padding: 2em;
+  color: white;
 }
 
 html,

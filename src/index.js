@@ -10,6 +10,7 @@ import reducers from './reducers'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
 
 import { blue800, amber50 } from 'material-ui/styles/colors'
 
@@ -35,7 +36,7 @@ if (process.env.NODE_ENV === 'development') {
 const store = createStore(reducers, composeEnhancers())
 
 ReactDOM.render(
-  <MuiThemeProvider muiTheme={muiTheme}>
+  <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
     <Provider store={store}>
       <App />
     </Provider>
