@@ -27,7 +27,7 @@ class Header extends React.Component {
             <ActionHome />
           </IconButton>
         </Link>
-        <Link to="advancedSearch">
+        <Link to="/advancedSearch">
           <RaisedButton primary={true} label="Advanced Search" />
         </Link>
         <div style={{ display: 'flex', justifyContent: 'center' }}>

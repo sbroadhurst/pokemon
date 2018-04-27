@@ -57,6 +57,13 @@ export const setCardChoice = cardChoice => {
   }
 }
 
+export const getSets = set => {
+  return {
+    type: action.GET_SETS,
+    payload: { sets: set }
+  }
+}
+
 const ACTION_HANDLERS = {
   [action.SET_STATE]: (state, action) => {
     return { ...state, ...action.payload }
@@ -85,6 +92,9 @@ const ACTION_HANDLERS = {
   },
   [action.CARD_CHOICE]: (state, action) => {
     return { ...state, ...action.payload }
+  },
+  [action.GET_SETS]: (state, action) => {
+    return { ...state, ...action.payload }
   }
 }
 
@@ -96,7 +106,8 @@ let defaultState = {
   advancedText: '',
   advancedType: [],
   legalType: '',
-  card: []
+  card: [],
+  sets: []
 }
 
 export const reducer = (state = defaultState, action) => {

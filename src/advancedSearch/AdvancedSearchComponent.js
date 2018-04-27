@@ -6,6 +6,7 @@ import elements from './elements'
 import RaisedButton from 'material-ui/RaisedButton'
 import { Link } from 'react-router-dom'
 import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton'
+import queryString from 'query-string'
 
 const styles = {
   checkbox: {
@@ -45,6 +46,14 @@ class AdvancedSearchComponent extends React.Component {
   }
 
   render() {
+    const parsed = queryString.parse(this.props.name)
+    parsed.name = this.props.advancedName
+    parsed.abilitytext = this.props.advancedText
+    parsed.types = this.props.advancedType
+    parsed.setCode = this.props.legalType
+    const stringified = queryString.stringify(parsed)
+    this.props.location.search = stringified
+
     return (
       <div style={styles.screen}>
         <form>
@@ -96,24 +105,18 @@ class AdvancedSearchComponent extends React.Component {
               <RadioButton
                 label="Standard"
                 style={styles.checkbox}
-                value="setCode=xyp|xy8|xy9|g1|xy10|xy11|xy12|sm1|smp|sm2|sm3|sm35|sm4|sm5"
+                value="xyp|xy8|xy9|g1|xy10|xy11|xy12|sm1|smp|sm2|sm3|sm35|sm4|sm5"
               />
               <RadioButton
                 label="Expanded"
                 style={styles.checkbox}
-                value="setCode=bwp|bw1|bw2|bw3|bw4|bw5|bw6|dv1|bw7|bw8|bw9|bw10|xyp|bw11|xy0|xy1|xy2|xy3|xy4|xy5|dc1|xy6|xy7|xy8|xy9|g1|xy10|xy11|xy12|sm1|smp|sm2|sm3|sm35|sm4|sm5"
+                value="bwp|bw1|bw2|bw3|bw4|bw5|bw6|dv1|bw7|bw8|bw9|bw10|xyp|bw11|xy0|xy1|xy2|xy3|xy4|xy5|dc1|xy6|xy7|xy8|xy9|g1|xy10|xy11|xy12|sm1|smp|sm2|sm3|sm35|sm4|sm5"
               />
             </RadioButtonGroup>
           </div>
           <Link
             to={{
-              pathname: '/advancedSearchResults/',
-              query: {
-                name: this.props.advancedName,
-                abilitytext: this.props.advancedText,
-                types: this.props.advancedType,
-                legal: this.props.legalType
-              }
+              pathname: '/advancedSearchResults/?' + stringified
             }}
           >
             <RaisedButton label="Search" primary={true} />

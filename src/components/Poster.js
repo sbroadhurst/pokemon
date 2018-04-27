@@ -13,7 +13,7 @@ class Poster extends React.Component {
             className="card"
             alt={card.name}
             title={card.name}
-            src={card.imageUrl}
+            src={card.imageUrl || card.logoUrl}
           />
         </Link>
       </div>

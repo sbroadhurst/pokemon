@@ -7,18 +7,11 @@ class AdvancedResults extends React.Component {
   }
 
   getResults() {
-    const { name, abilitytext, types, legal } = this.props.location.query
-    console.log(legal)
-    fetch(
-      'https://api.pokemontcg.io/v1/cards?name=' +
-        name +
-        '&abilitytext=' +
-        abilitytext +
-        '&types=' +
-        types +
-        '&' +
-        legal
-    )
+    console.log(this.props)
+    const { search } = this.props.location
+    const url = 'https://api.pokemontcg.io/v1/cards?' + search
+    console.log(url)
+    fetch(url)
       .then(res => {
         return res.json()
       })

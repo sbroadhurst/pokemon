@@ -19,12 +19,22 @@
 .footer {
   /* background: lightgreen; */
   height: 300px;
-  color: red;
+  color: white;
+}
+
+.logo {
+  width: 50vw;
+  height: 25vh;
 }
 
 .main {
   text-align: left;
   /* background: deepskyblue; */
+}
+
+.poke-info {
+  width: 235px;
+  height: 300px;
 }
 
 .aside-1 {
