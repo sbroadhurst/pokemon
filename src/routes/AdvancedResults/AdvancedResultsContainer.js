@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import AdvancedResults from './AdvancedResults'
 
-import { setSearchResultsAdvanced } from '../reducers/cards'
+import { setSearchResultsAdvanced } from '../../reducers/cards'
 
 const mapStatetoProps = state => {
   return {

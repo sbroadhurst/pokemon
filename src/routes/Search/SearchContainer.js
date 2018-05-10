@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import SearchComponent from './SearchComponent'
 
-import { setSearchResultsName } from '../reducers/cards'
+import { setSearchResultsName } from '../../reducers/cards'
 
 const mapStatetoProps = state => {
   return {

@@ -6,7 +6,7 @@ import {
   setAdvancedText,
   setAdvancedType,
   setLegalType
-} from '../reducers/cards'
+} from '../../reducers/cards'
 
 const mapStatetoProps = state => {
   return {

@@ -1,8 +1,8 @@
 import React from 'react'
-import Cardlayout from '.././Cardlayout.jpg'
-import logo from '.././logo.png'
-import '../card/Boxes.css'
-import CarouselPoster from '../components/CarouselPoster'
+import Cardlayout from '../../Cardlayout.jpg'
+import logo from '../../logo.png'
+import '../Card/Boxes.css'
+import CarouselPoster from '../../components/CarouselPoster'
 
 class HomeComponent extends React.Component {
   componentWillMount() {

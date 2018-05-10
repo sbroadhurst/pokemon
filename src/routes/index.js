@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
-import HomeComponent from '../home/'
-import Header from '../header'
-import SearchComponent from '../search'
-import AdvancedSearchComponent from '../advancedSearch'
-import AdvancedResults from '../advancedResults'
-import Card from '../card'
+import HomeComponent from './Home'
+import Header from './Header'
+import SearchComponent from './Search'
+import AdvancedSearchComponent from './AdvancedSearch'
+import AdvancedResults from './AdvancedResults'
+import Card from './Card'
 
 export default class Routes extends Component {
   render() {

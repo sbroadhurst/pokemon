@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import HomeComponent from './HomeComponent'
 
-import { getSets } from '../reducers/cards'
+import { getSets } from '../../reducers/cards'
 
 const mapStatetoProps = state => {
   return {

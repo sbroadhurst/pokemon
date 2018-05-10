@@ -1,5 +1,5 @@
 import React from 'react'
-import Poster from '../components/Poster'
+import Poster from '../../components/Poster'
 
 let oldSearch
 
@@ -11,7 +11,6 @@ class SearchComponent extends React.Component {
   componentDidUpdate() {
     let query = this.props.match.params.text
     if (query !== oldSearch) {
-      console.log('will update')
       this.getSearchResultsName()
 
       oldSearch = this.props.match.params.text
@@ -41,7 +40,6 @@ class SearchComponent extends React.Component {
   }
 
   render() {
-    // console.log(this.props)
     const { SearchResultsName } = this.props
     return <div> {this.mapSearchName(SearchResultsName)} </div>
   }

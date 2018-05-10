@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import Card from './Card'
 
-import { setCardChoice } from '../reducers/cards'
+import { setCardChoice } from '../../reducers/cards'
 
 const mapStatetoProps = state => {
   return {
