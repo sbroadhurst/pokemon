@@ -4,7 +4,6 @@ import Checkbox from 'material-ui/Checkbox'
 import Paper from 'material-ui/Paper'
 import elements from './elements'
 import RaisedButton from 'material-ui/RaisedButton'
-import { Link } from 'react-router-dom'
 import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton'
 import queryString from 'query-string'
 
@@ -45,15 +44,17 @@ class AdvancedSearchComponent extends React.Component {
     this.props.setLegalType(value.target.value)
   }
 
-  render() {
+  goRes = results => {
     const parsed = queryString.parse(this.props.name)
     parsed.name = this.props.advancedName
     parsed.abilitytext = this.props.advancedText
     parsed.types = this.props.advancedType
     parsed.setCode = this.props.legalType
     const stringified = queryString.stringify(parsed)
-    this.props.location.search = stringified
+    this.props.history.push('/advancedSearchResults/?' + stringified)
+  }
 
+  render() {
     return (
       <div style={styles.screen}>
         <form>
@@ -114,13 +115,13 @@ class AdvancedSearchComponent extends React.Component {
               />
             </RadioButtonGroup>
           </div>
-          <Link
+          {/* <Link
             to={{
               pathname: '/advancedSearchResults/?' + stringified
             }}
-          >
-            <RaisedButton label="Search" primary={true} />
-          </Link>
+          > */}
+          <RaisedButton label="Search" onClick={this.goRes} primary={true} />
+          {/* </Link> */}
         </form>
       </div>
     )
