@@ -48,7 +48,7 @@ class Card extends React.Component {
 
   render() {
     const { card } = this.props
-    console.log(card)
+    //console.log(card)
     if (!card.attacks) {
       return (
         <div className="wrapper">
@@ -74,7 +74,7 @@ class Card extends React.Component {
         <article className="main">
           <div className="body">
             <p>
-              {card.name} - HP: {card.hp}
+              {card.name} - HP: {card.hp}{' '}
             </p>
             <div>
               Type:{' '}

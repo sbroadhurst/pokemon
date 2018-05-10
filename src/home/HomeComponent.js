@@ -2,7 +2,7 @@ import React from 'react'
 import Cardlayout from '.././Cardlayout.jpg'
 import logo from '.././logo.png'
 import '../card/Boxes.css'
-import Poster from '../components/Poster'
+import CarouselPoster from '../components/CarouselPoster'
 
 class HomeComponent extends React.Component {
   componentWillMount() {
@@ -22,18 +22,10 @@ class HomeComponent extends React.Component {
 
   setsMap() {
     const sets = this.props.sets
-    console.log(sets)
     return (
       <div>
         {sets.reverse().map((info, index) => {
-          return (
-            <Poster
-              key={index}
-              info={info}
-              id={info.id}
-              /*  select={this.posterSelected} */
-            />
-          )
+          return <CarouselPoster key={index} info={info} id={info.id} />
         })}
       </div>
     )

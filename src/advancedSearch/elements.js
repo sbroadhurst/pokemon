@@ -17,7 +17,7 @@ const elements = [
   {
     name: 'Fairy',
     image:
-      'https://orig00.deviantart.net/b165/f/2013/241/7/5/fairy_type_orb_v3_by_karite_kita_neko-d6k85b5.png'
+      'https://pre00.deviantart.net/cbf1/th/pre/i/2014/241/e/f/fairy_medallion_by_zekrom_9-d7x4b2e.png'
   },
   {
     name: 'Fighting',
