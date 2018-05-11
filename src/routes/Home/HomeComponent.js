@@ -1,6 +1,6 @@
 import React from 'react'
 import Cardlayout from '../../Cardlayout.jpg'
-import '../Card/Boxes.css'
+import '../Cards/Boxes.css'
 import CarouselPoster from '../../components/CarouselPoster'
 
 class HomeComponent extends React.Component {

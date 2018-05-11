@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Card from './Card'
+import Cards from './Cards'
 
 import { setCardChoice } from '../../reducers/cards'
 
@@ -17,4 +17,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStatetoProps, mapDispatchToProps)(Card)
+export default connect(mapStatetoProps, mapDispatchToProps)(Cards)

@@ -32,6 +32,14 @@ const styles = {
   },
   underline: {
     border: '2px solid white'
+  },
+  format: {
+    display: 'flex',
+    flexDirection: 'row'
+  },
+  radio: {
+    fontWeight: 'bold',
+    fontSize: 25
   }
 }
 
@@ -102,15 +110,17 @@ class AdvancedSearchComponent extends React.Component {
               name="legal"
               labelPosition="left"
               onChange={this.changeLegal}
+              style={styles.format}
             >
+              <RadioButton label="All" style={styles.radio} value="" />
               <RadioButton
                 label="Standard"
-                style={styles.checkbox}
+                style={styles.radio}
                 value="xyp|xy8|xy9|g1|xy10|xy11|xy12|sm1|smp|sm2|sm3|sm35|sm4|sm5"
               />
               <RadioButton
                 label="Expanded"
-                style={styles.checkbox}
+                style={styles.radio}
                 value="bwp|bw1|bw2|bw3|bw4|bw5|bw6|dv1|bw7|bw8|bw9|bw10|xyp|bw11|xy0|xy1|xy2|xy3|xy4|xy5|dc1|xy6|xy7|xy8|xy9|g1|xy10|xy11|xy12|sm1|smp|sm2|sm3|sm35|sm4|sm5"
               />
             </RadioButtonGroup>

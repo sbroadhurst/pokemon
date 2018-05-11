@@ -16,6 +16,9 @@ const styles = {
     width: 96,
     height: 96,
     padding: 24
+  },
+  label: {
+    top: 15
   }
 }
 
@@ -43,7 +46,11 @@ class Header extends React.Component {
             />
 
             <Link to={{ pathname: '/search/' + this.props.SearchText }}>
-              <RaisedButton label="SEARCH" />
+              <RaisedButton
+                label="SEARCH"
+                style={{ margin: '10px', height: '50px' }}
+                labelStyle={styles.label}
+              />
             </Link>
           </ToolbarGroup>
         </Toolbar>
