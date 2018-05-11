@@ -1,6 +1,5 @@
 import React from 'react'
 import Cardlayout from '../../Cardlayout.jpg'
-import logo from '../../logo.png'
 import '../Card/Boxes.css'
 import CarouselPoster from '../../components/CarouselPoster'
 
@@ -36,9 +35,9 @@ class HomeComponent extends React.Component {
       <div className="wrapper">
         <header className="header">
           {' '}
-          <img src={logo} className="logo" alt="Pokecard-logo" />
+          <div className="logo" />
         </header>
-        <article className="main">
+        <article className="sets">
           <div className="body">{this.setsMap()}</div>
         </article>
         <aside className="aside aside-1">

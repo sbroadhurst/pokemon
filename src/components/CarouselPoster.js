@@ -9,7 +9,7 @@ class CarouselPoster extends React.Component {
       <div className="card-list" style={{ display: 'inline' }}>
         <a rel="noopener noreferrer" href={url} target="_blank">
           <img
-            style={{ width: '130px', height: '140px', margin: '5px' }}
+            style={{ width: '202.3px', height: '79.1', margin: '5px' }}
             className="card"
             alt={card.name}
             title={card.name}

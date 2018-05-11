@@ -4,12 +4,11 @@ import { Link } from 'react-router-dom'
 class Poster extends React.Component {
   render() {
     let card = this.props.info
-    // console.log(this.props)
     return (
       <div className="card-list" style={{ display: 'inline' }}>
         <Link to={{ pathname: '/info/' + card.id }}>
           <img
-            style={{ width: '120px', height: '150px', margin: '5px' }}
+            style={{ width: '159.25px', height: '222.3px', margin: '5px' }}
             className="card"
             alt={card.name}
             title={card.name}

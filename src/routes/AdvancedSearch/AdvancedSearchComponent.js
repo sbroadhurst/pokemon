@@ -115,13 +115,8 @@ class AdvancedSearchComponent extends React.Component {
               />
             </RadioButtonGroup>
           </div>
-          {/* <Link
-            to={{
-              pathname: '/advancedSearchResults/?' + stringified
-            }}
-          > */}
+          <br />
           <RaisedButton label="Search" onClick={this.goRes} primary={true} />
-          {/* </Link> */}
         </form>
       </div>
     )

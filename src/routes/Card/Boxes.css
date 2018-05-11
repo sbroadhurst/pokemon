@@ -10,6 +10,10 @@
   flex: 1 100%;
 }
 
+a {
+  color: white;
+}
+
 .header {
   /* background: tomato; */
   height: 200px;
@@ -23,18 +27,24 @@
 }
 
 .logo {
-  width: 50vw;
-  height: 25vh;
+  background-image: url('../../logo.png');
+  height: 164px;
+  width: 320px;
+  background-size: 100%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main {
   text-align: left;
-  /* background: deepskyblue; */
+  background: deepskyblue;
 }
 
 .poke-info {
-  width: 235px;
-  height: 300px;
+  width: 290x;
+  height: 296px;
 }
 
 .aside-1 {
@@ -76,6 +86,7 @@
 body {
   padding: 2em;
   color: white;
+  background-image: url('../../pokemon_wallpaper3.png');
 }
 
 html,

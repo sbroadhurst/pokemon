@@ -13,7 +13,6 @@ class Card extends React.Component {
         return res.json()
       })
       .then(res => {
-        console.log(res.cards)
         this.props.setCardChoice(res.cards[0])
       })
   }

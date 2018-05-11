@@ -5,10 +5,7 @@ import pokemon_wallpaper3 from './pokemon_wallpaper3.png'
 class App extends Component {
   render() {
     return (
-      <div
-        className="app"
-        style={{ backgroundImage: 'url(' + pokemon_wallpaper3 + ')' }}
-      >
+      <div className="app">
         <Routes />
       </div>
     )

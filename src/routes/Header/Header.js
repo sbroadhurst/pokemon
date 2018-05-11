@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import IconButton from 'material-ui/IconButton'
 import ActionHome from 'material-ui/svg-icons/action/home'
-import ActionSearch from 'material-ui/svg-icons/action/search'
+import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar'
 import SearchBar from 'material-ui-search-bar'
 import RaisedButton from 'material-ui/RaisedButton'
+import { transparent } from 'material-ui/styles/colors'
 
 const styles = {
   mediumIcon: {
@@ -22,25 +23,30 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <Link to="/">
-          <IconButton iconStyle={styles.mediumIcon} style={styles.medium}>
-            <ActionHome />
-          </IconButton>
-        </Link>
-        <Link to="/advancedSearch">
-          <RaisedButton primary={true} label="Advanced Search" />
-        </Link>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Link to={{ pathname: '/search/' + this.props.SearchText }}>
-            <IconButton style={{ left: '310px' }}>
-              <ActionSearch />
-            </IconButton>{' '}
-          </Link>
-          <SearchBar
-            onChange={value => this.props.setSearchText(value)}
-            onRequestSearch={value => console.log('search pushed')}
-          />
-        </div>
+        <Toolbar style={{ backgroundColor: transparent }}>
+          <ToolbarGroup firstChild={true}>
+            <Link to="/">
+              <IconButton iconStyle={styles.mediumIcon} style={styles.medium}>
+                <ActionHome />
+              </IconButton>
+            </Link>
+          </ToolbarGroup>
+          <ToolbarGroup>
+            <Link to="/advancedSearch">
+              <RaisedButton primary={true} label="Advanced Search" />
+            </Link>
+          </ToolbarGroup>
+          <ToolbarGroup lastChild={true}>
+            <SearchBar
+              onChange={value => this.props.setSearchText(value)}
+              onRequestSearch={value => console.log('search pushed')}
+            />
+
+            <Link to={{ pathname: '/search/' + this.props.SearchText }}>
+              <RaisedButton label="SEARCH" />
+            </Link>
+          </ToolbarGroup>
+        </Toolbar>
         <hr />
       </div>
     )
