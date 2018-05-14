@@ -2,11 +2,17 @@ import React from 'react'
 import Poster from '../../components/Poster'
 
 class AdvancedResults extends React.Component {
+  constructor() {
+    super()
+    this.state = { busy: false }
+  }
+
   componentWillMount() {
     this.getResults()
   }
 
   getResults() {
+    this.setState({ busy: true })
     const { search } = this.props.location
     const url = 'https://api.pokemontcg.io/v1/cards?' + search
     fetch(url)
@@ -15,6 +21,7 @@ class AdvancedResults extends React.Component {
       })
       .then(res => {
         this.props.setSearchResultsAdvanced(res.cards)
+        this.setState({ busy: false })
       })
   }
 
@@ -31,7 +38,9 @@ class AdvancedResults extends React.Component {
 
   render() {
     const { SearchResultsAdvanced } = this.props
-    return <div> {this.mapSearchName(SearchResultsAdvanced)} </div>
+    if (this.state.busy === false)
+      return <div> {this.mapSearchName(SearchResultsAdvanced)} </div>
+    else return <div />
   }
 }
 
